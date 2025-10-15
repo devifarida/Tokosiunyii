@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Si Unyi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffafc;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ffb6c1;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .produk-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+    .produk {
+      background-color: white;
+      width: 200px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 10px;
+      transition: 0.3s;
+    }
+    .produk:hover {
+      transform: scale(1.05);
+    }
+    img {
+      width: 100%;
+      border-radius: 15px;
+    }
+    button {
+      background-color: #ffa07a;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #ff8c69;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #ffb6c1;
+      color: white;
+      margin-top: 20px;
+    }
+    #keranjang {
+      max-width: 400px;
+      margin: 20px auto;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 15px;
+    }
+    #keranjang h3 {
+      text-align: center;
+      color: #ff6f91;
+    }
+    #keranjang ul {
+      list-style: none;
+      padding: 0;
+    }
+    #keranjang li {
+      margin: 5px 0;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    #checkout {
+      background-color: #ff6f91;
+      width: 100%;
+      border: none;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    #checkout:hover {
+      background-color: #ff4d6d;
+    }
+  </style>
+</head>
+<body>
+  <header>🐱 Selamat Datang di Toko Si Unyi 🐾</header>
+
+  <div class="produk-container">
+    <div class="produk">
+      <img src="c:\laragon\www\TokoSiUnyi\images\Suit formal dress.jpeg" alt="Baju Kucing">
+      <h3>Baju Kucing Formal</h3>
+      <p>Rp 55.000</p>
+      <button onclick="tambahKeranjang('Baju Kucing Formal', 55000)">Beli Sekarang</button>
+    </div>
+
+    <div class="produk">
+      <img src="c:\laragon\www\TokoSiUnyi\images\Siria Litière Les Chats Agglomérante et Ecologiques (Set 2 Sac de 10L) 20L _ Amazon_fr_ Animalerie.jpeg" alt="Pasir Kucing">
+      <h3>Pasir Kucing Harum</h3>
+      <p>Rp 35.000</p>
+      <button onclick="tambahKeranjang('Pasir Kucing Harum', 35000)">Beli Sekarang</button>
+    </div>
+
+    <div class="produk">
+      <img src="c:\laragon\www\TokoSiUnyi\images\rekomendasi makanan kucing agar cepat gemuk.jpeg" alt="Whiskes">
+      <h3>Whiskes</h3>
+      <p>Rp 20.000</p>
+      <button onclick="tambahKeranjang('Whiskes', 20000)">Beli Sekarang</button>
+    </div>
+
+    <div class="produk">
+      <img src="c:\laragon\www\TokoSiUnyi\images\When your pet's health has been compromised by a serious problem or as a result of normal aging, Immune Strengthener's blend of natural vitamins, herbs, antioxidants and mushrooms can provide immune system support .jpeg" alt="Vitamin Kucing">
+      <h3>Vitamin Kucing</h3>
+      <p>Rp 15.000</p>
+      <button onclick="tambahKeranjang('Vitamin Kucing', 20000)">Beli Sekarang</button>
+    </div>
+
+    <div class="produk">
+      <img src="c:\laragon\www\TokoSiUnyi\images\mainan kucing.jpeg" alt="Mainan Kucing">
+      <h3>Mainan Kucing</h3>
+      <p>Rp 15.000</p>
+      <button onclick="tambahKeranjang('Mainan Kucing', 20000)">Beli Sekarang</button>
+    </div>
+
+    <div class="produk">
+      <img src="c:\laragon\www\TokoSiUnyi\images\Kalung kucing custom Miyoecutie_id.jpeg" alt="Kalung kucing Custom">
+      <h3>Kalung Kucing Custom</h3>
+      <p>Rp 15.000</p>
+      <button onclick="tambahKeranjang('Kalung Kucing Lucu', 20000)">Beli Sekarang</button>
+    </div>
+
+    <div class="produk">
+      <img src="c:\laragon\www\TokoSiUnyi\images\NANANARDOSO Cat Litter Box with Lid,Fully Enclosed Litter Pan,Drawer Type Cat Toilet with Scoop，Large Space for Cats.jpeg" alt="Kalung kucing Custom">
+      <h3>Litter Box</h3>
+      <p>Rp 15.000</p>
+      <button onclick="tambahKeranjang('Litter Box', 20000)">Beli Sekarang</button>
+    </div>
+
+    <div class="produk">
+      <img src="c:\laragon\www\TokoSiUnyi\images\Cat.jpeg" alt="Topi Kucing Lucu">
+      <h3>Topi Kucing Lucu</h3>
+      <p>Rp 15.000</p>
+      <button onclick="tambahKeranjang('Topi Kucing Lucu', 20000)">Beli Sekarang</button>
+    </div>
+  </div>
+
+  <!-- Bagian Keranjang -->
+  <div id="keranjang">
+    <h3>🛒 Keranjang Belanja</h3>
+    <ul id="daftar-keranjang"></ul>
+    <p><b>Total:</b> Rp <span id="total">0</span></p>
+    <button id="checkout" onclick="checkout()">Checkout Sekarang</button>
+  </div>
+
+  <footer>© 2025 Toko Si Unyi – Semua Hak Dilindungi</footer>
+
+  <script>
+    let keranjang = [];
+    let total = 0;
+
+    function tambahKeranjang(nama, harga) {
+      keranjang.push({ nama, harga });
+      total += harga;
+      updateKeranjang();
+      alert(nama + " telah ditambahkan ke keranjang!");
+    }
+
+    function updateKeranjang() {
+      const daftar = document.getElementById("daftar-keranjang");
+      daftar.innerHTML = "";
+      keranjang.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.nama} - Rp ${item.harga.toLocaleString()}`;
+        daftar.appendChild(li);
+      });
+      document.getElementById("total").textContent = total.toLocaleString();
+    }
+
+    function checkout() {
+      if (keranjang.length === 0) {
+        alert("Keranjang masih kosong!");
+        return;
+      }
+
+      let pesan = "Halo! Saya ingin memesan produk berikut:%0A";
+      keranjang.forEach(item => {
+        pesan += `- ${item.nama} (Rp ${item.harga.toLocaleString()})%0A`;
+      });
+      pesan += `%0ATotal: Rp ${total.toLocaleString()}%0A`;
+      pesan += "%0ADari Toko Si Unyi 🐾";
+
+      // arahkan ke WhatsApp
+      window.open(`https://wa.me/6281992553695?text=${pesan}`, "_blank");
+    }
+  </script>
+</body>
+</html>
